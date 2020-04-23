@@ -15,7 +15,7 @@ with open(notebook_filename) as f_in:
 notebook_processor = ExecutePreprocessor(timeout=600, kernel_name='python3')
 
 # set the path for the running notebbook.
-notebook_processor.preprocess(nb, {'metadata': {'path': './data/'}})
+notebook_processor.preprocess(notebook, {'metadata': {'path': './data/'}})
 
 with open(output_notebook_filename, 'w', encoding='utf-8') as f:
     nbformat.write(notebook, f)
